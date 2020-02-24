@@ -1,0 +1,14 @@
+Plans Actions
+
+
+Plan Actions are defined as a set of tasks.
+An action can be a broadcast task, this sends a  text message with the task name and a link to a  page providing more detail and a link to all files  attached to the task.
+This is useful in for example a fire situation  where one must broadcast to all staff at the  customer / location to evacuate. Details  instructions are in linked page as well as any  evacuation plans and gathering points.
+Non-Broadcast actions have steps and step  items as per next screen.
+
+Customers / Locations
+
+
+If you are running MSP version these are  Customers, otherwise they are Locations.
+You may have as many as you require.
+If you are using Active shooter / Flood / Fire  plans it is important to add all the people at the  customer / location into this location in order  that they receive broadcast and typed  messages.

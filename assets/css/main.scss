@@ -1,0 +1,46 @@
+@import "./partials/_variables.scss";
+@import "./partials/mixins.scss";
+@import "./partials/_types.scss";
+@import "./partials/utilities.scss";
+
+.std-padding {
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  @include breakpoint($xLarge) {
+    padding-left: $body-padding;
+    padding-right: $body-padding;
+  }
+}
+
+.std-margin {
+  margin-left: 1rem;
+  margin-right: 1rem;
+
+  @include breakpoint($xLarge) {
+    margin-left: $body-padding;
+    margin-right: $body-padding;
+  }
+}
+
+.std-y-padding {
+  padding-top: $std-y-padding;
+  padding-bottom: $std-y-padding;
+}
+
+.legend-section-height {
+  height: $section-height;
+}
+
+.std-input {
+  display: block;
+  width: 100%;
+  min-height: 45px;
+  border-radius: 4px;
+  border: 0;
+}
+
+textarea {
+  height: 135px;
+  resize: none;
+}
