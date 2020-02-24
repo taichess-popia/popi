@@ -245,7 +245,7 @@ export default {
 
 .legend-img {
   width: 100%;
-  // background-image: url(../assets/images/legend/main-img.png);
+  background-image: url(~assets/images/legend/main-img.png);
 
   .lengend-img__content {
     max-width: 35rem;
