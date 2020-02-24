@@ -9,7 +9,7 @@
       :key="`${index}-listItem`"
       class="flex-start pull-start"
     >
-      <span class="mr-1"><img src="/images/icons/checkmark.svg"/></span>
+      <span class="mr-1"><img src="~/assets/images/icons/checkmark.svg"/></span>
       <p>{{ listItem }}</p>
     </div>
   </div>

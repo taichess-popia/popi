@@ -1,7 +1,7 @@
 <template functional>
   <div class="flex-start pull-start">
     <span class="create-margin-offset"
-      ><img src="/images/icons/circleCheckmark.svg"
+      ><img src="~/assets/images/icons/circleCheckmark.svg"
     /></span>
     <p>{{ props.feature }}</p>
   </div>

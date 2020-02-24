@@ -76,12 +76,12 @@
           </div>
         </div>
         <div>
-          <img src="/images/homepage.png" class="max-w-100" />
+          <img src="~/assets/images/homepage.png" class="max-w-100" />
         </div>
       </div>
     </div>
     <div class="std-padding std-y-padding grid-large-left background-grey">
-      <div><img src="/images/compliance.png" class="max-w-100" /></div>
+      <div><img src="~/assets/images/compliance.png" class="max-w-100" /></div>
       <div class="stack">
         <h2>Compliance Section</h2>
         <div class="half-stack">
@@ -105,12 +105,12 @@
         </div>
       </div>
       <div>
-        <img src="/images/compliance-items.png" class="max-w-100" />
+        <img src="~/assets/images/compliance-items.png" class="max-w-100" />
       </div>
     </div>
     <div class="std-padding std-y-padding grid-large-left background-grey">
       <div>
-        <img src="/images/data-mapping.png" class="max-w-100" />
+        <img src="~/assets/images/data-mapping.png" class="max-w-100" />
       </div>
       <div class="stack">
         <h2>Data Mapping</h2>
@@ -135,7 +135,7 @@
         </div>
       </div>
       <div>
-        <img src="/images/dynamic-dashboards.png" class="max-w-100" />
+        <img src="~/assets/images/dynamic-dashboards.png" class="max-w-100" />
       </div>
     </div>
     <div id="partner" class="std-padding std-y-padding stack">

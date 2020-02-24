@@ -1,7 +1,7 @@
 <template>
   <header class="header-component std-padding">
     <div>
-      <img src="/images/logo.svg" />
+      <img src="~/assets/images/logo.svg" />
     </div>
     <div>
       <ul class="nav-list">
