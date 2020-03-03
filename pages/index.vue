@@ -1,25 +1,18 @@
 <template>
   <div class="container">
-    <Header />
+    <Header :toggleSidebar="toggleSidebar" :sidebarOpen="sidebarOpen" />
     <div
       id="home"
       class="legend-img flex-center pull-start flex-column std-padding legend-section-height"
+      @click="closeSidebar"
     >
       <div class="lengend-img__content stack">
-        <h1 class="white-text">
-          POPIA is coming.
-          <br />
-          <br />
-          All organisations will have to comply
-        </h1>
-        <h3 class="white-text">
-          Our service will enable you to make your clients compliant
-        </h3>
+        <h1 class="white-text">POPIA is coming.</h1>
+        <h1 class="white-text">All organisations will have to comply</h1>
+        <h3 class="white-text">Our service will enable you to make your clients compliant</h3>
       </div>
     </div>
-    <div
-      class="std-y-padding std-padding card-section flex-column flex-center pull-start stack"
-    >
+    <div class="std-y-padding std-padding card-section flex-column flex-center pull-start stack">
       <h2 class="white-text">POPIA365 allows your clients to:</h2>
       <div class="card-section__card-container">
         <CardWithHeader
@@ -29,9 +22,9 @@
           :list="item.list"
         />
       </div>
-      <h3 class="card-section__post-heading white-text">
-        Pricing plans from professional companies to enterprise.
-      </h3>
+      <h3
+        class="card-section__post-heading white-text"
+      >Pricing plans from professional companies to enterprise.</h3>
     </div>
     <div id="features" class="std-padding std-y-padding stack-2p5">
       <h1>Software Features</h1>
@@ -81,7 +74,9 @@
       </div>
     </div>
     <div class="std-padding std-y-padding grid-large-left background-grey">
-      <div><img src="~/assets/images/compliance.png" class="max-w-100" /></div>
+      <div>
+        <img src="~/assets/images/compliance.png" class="max-w-100" />
+      </div>
       <div class="stack">
         <h2>Compliance Section</h2>
         <div class="half-stack">
@@ -157,13 +152,10 @@
         />
       </div>
     </div>
-    <div
-      id="contact"
-      class="grid-even contact-section std-padding std-y-padding white-text"
-    >
+    <div id="contact" class="grid-even contact-section std-padding std-y-padding">
       <div class="stack">
-        <h2>Contact Us</h2>
-        <div class="half-stack">
+        <h2 class="white-text">Contact Us</h2>
+        <div class="half-stack white-text">
           <p>
             Contact us to become a partner, OR if you wish to have us refer a
             partner to you.
@@ -173,26 +165,21 @@
             service and discuss how best you can partner with us.
           </p>
         </div>
-        <div class="half-stack flex-column flex-start pull-start">
-          <label for="fname">First Name</label>
-          <input type="text" name="fname" id="fname" class="std-input" />
-        </div>
-        <div class="half-stack flex-column flex-start pull-start">
-          <label for="lname">Last Name</label>
-          <input type="text" name="lname" id="lname" class="std-input" />
-        </div>
-        <div class="half-stack flex-column flex-start pull-start">
-          <label for="message">Message (Optional)</label>
-          <textarea
-            type="text"
-            name="message"
-            id="message"
-            class="std-input"
-          ></textarea>
-        </div>
-        <button type="submit">
-          Submit
-        </button>
+        <form action="mailto:sales@popia365.co.za" method="post" enctype="text/plain" class="stack">
+          <div class="half-stack flex-column flex-start pull-start">
+            <label for="fname" class="white-text">First Name</label>
+            <input type="text" name="fname" id="fname" class="std-input" />
+          </div>
+          <div class="half-stack flex-column flex-start pull-start">
+            <label for="lname" class="white-text">Last Name</label>
+            <input type="text" name="lname" id="lname" class="std-input" />
+          </div>
+          <div class="half-stack flex-column flex-start pull-start">
+            <label for="message" class="white-text">Message (Optional)</label>
+            <textarea type="text" name="message" id="message" class="std-input"></textarea>
+          </div>
+          <button type="submit" class="white-text">Submit</button>
+        </form>
       </div>
       <div></div>
     </div>
@@ -213,8 +200,17 @@ export default {
   components: { Header, CardWithHeader, TextWithCircleCheck },
   data() {
     return {
-      ...repeatableLists
+      ...repeatableLists,
+      sidebarOpen: false
     };
+  },
+  methods: {
+    toggleSidebar() {
+      this.sidebarOpen = !this.sidebarOpen;
+    },
+    closeSidebar() {
+      this.sidebarOpen = false;
+    }
   }
 };
 </script>
