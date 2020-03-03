@@ -5,22 +5,38 @@
     </div>
     <div>
       <ul class="nav-list">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#features">Features</a></li>
-        <li><a href="#partner">Partner</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li>
+          <a href="#home">Home</a>
+        </li>
+        <li>
+          <a href="#features">Features</a>
+        </li>
+        <li>
+          <a href="#partner">Partner</a>
+        </li>
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
       </ul>
-      <button class="hamburger">
+      <button class="hamburger" @click="toggleSidebar">
         <div></div>
         <div></div>
         <div></div>
       </button>
-      <div class="sidebar">
+      <div class="sidebar" :class="sidebarOpen ? 'open' : ''">
         <ul class="flex-column flex-center">
-          <li><a href="#home" class="white-text">Home</a></li>
-          <li><a href="#features" class="white-text">Features</a></li>
-          <li><a href="#partner" class="white-text">Partner</a></li>
-          <li><a href="#contact" class="white-text">Contact</a></li>
+          <li>
+            <a href="#home" @click="toggleSidebar" class="white-text">Home</a>
+          </li>
+          <li>
+            <a href="#features" @click="toggleSidebar" class="white-text">Features</a>
+          </li>
+          <li>
+            <a href="#partner" @click="toggleSidebar" class="white-text">Partner</a>
+          </li>
+          <li>
+            <a href="#contact" @click="toggleSidebar" class="white-text">Contact</a>
+          </li>
         </ul>
       </div>
     </div>
@@ -29,10 +45,15 @@
 
 <script>
 export default {
-  data() {
-    return {
-      sidebarOpen: false
-    };
+  props: {
+    toggleSidebar: {
+      type: Function,
+      default: () => {}
+    },
+    sidebarOpen: {
+      type: Boolean,
+      default: false
+    }
   }
 };
 </script>
@@ -50,6 +71,10 @@ export default {
   position: absolute;
   right: -90vw;
   transition-duration: 0.2s;
+
+  &.open {
+    right: 0;
+  }
 }
 
 a {
@@ -99,10 +124,6 @@ ul.nav-list > li {
 
   &:focus {
     outline: none;
-
-    + .sidebar {
-      right: 0;
-    }
   }
 
   > * {
